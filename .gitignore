@@ -1,0 +1,11 @@
+.playwright-mcp/
+site-*.png
+admin-*.png
+studio-*.png
+runway-review-*.png
+runway-detail-*.png
+reference-*.png
+node_modules/
+.env
+.env.*
+!.env.example

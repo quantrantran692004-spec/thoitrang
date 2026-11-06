@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#b2182b" />
+    <meta name="description" content="Hương Muối — shop thời trang Việt với trải nghiệm phối đồ trực quan cho mọi dáng người." />
+    <title>Hương Muối — Mặc theo cách của bạn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/looks/look-1.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="store.js" defer></script>
+    <script src="tryon-provider.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">BỘ SƯU TẬP MỚI · PHỐI ĐỒ THEO CÁCH CỦA BẠN <span>✦</span> THỬ SIZE TRÊN MẪU MINH HOẠ</div>
+    <header class="site-header">
+      <a class="brand" href="#dau-trang" aria-label="Hương Muối, về đầu trang">HƯƠNG<span>MUỐI</span><small>STUDIO</small></a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#cam-hung">Look gợi ý</a>
+        <a href="#phoi-do">Tự phối đồ</a>
+        <a href="#san-pham">Sản phẩm</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-link" id="search-toggle" type="button" aria-label="Tìm sản phẩm" title="Tìm sản phẩm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+        </button>
+        <button class="header-link bag-trigger" type="button" aria-label="Mở giỏ hàng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16l-1 13H5L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+          <span class="bag-count" id="bag-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="dau-trang">
+      <section class="runway-section" id="looks" aria-labelledby="runway-title">
+        <div class="runway-stage" id="runway-stage" tabindex="0" aria-roledescription="carousel" aria-label="Sân khấu phối đồ; kéo trang phục vào người mẫu, dùng phím mũi tên để chuyển look">
+          <div class="stage-head">
+            <span class="eyebrow"><span class="eyebrow-line"></span> HƯƠNG MUỐI / FITTING ROOM</span>
+            <h1 id="runway-title">Phối một cách<br /><em>rất riêng.</em></h1>
+            <p>Khám phá các bộ phối có ảnh sẵn. Chọn sản phẩm để xem chi tiết và những bộ liên quan.</p>
+            <a class="text-link" href="#hero-wardrobe">Mở tủ đồ <span aria-hidden="true">↗</span></a>
+          </div>
+          <span id="phoi-do" class="stage-anchor"></span>
+          <div id="runway-models" class="runway-models"></div>
+          <div class="stage-drop-label" id="stage-drop-label">THẢ ĐỂ XEM SẢN PHẨM ↓</div>
+          <div class="stage-floor"></div>
+          <div class="stage-bottom">
+            <div class="stage-controls">
+              <button class="circle-control" id="look-prev" type="button" aria-label="Look trước">←</button>
+              <button class="circle-control" id="look-next" type="button" aria-label="Look sau">→</button>
+              <button class="play-control" id="look-play" type="button" aria-label="Tự động chuyển look" aria-pressed="false"><span id="play-icon">▶</span></button>
+            </div>
+            <div class="look-progress" id="look-progress" role="tablist" aria-label="Chọn look"></div>
+            <div class="drag-hint">KÉO ĐỂ XEM <span>↔</span></div>
+          </div>
+        </div>
+        <aside class="look-panel" aria-label="Tủ đồ và set trên người mẫu">
+          <div class="panel-topline"><span>TỦ THAY ĐỒ</span><span id="look-number">01 / 06</span></div>
+          <div class="panel-heading"><span class="panel-kicker">SET ĐANG PHỐI</span><h2 id="look-title">Phố lên đèn</h2><p id="look-description">Chọn món bên dưới để đổi trang phục trên mẫu.</p></div>
+          <div class="hero-fitting-controls"><div class="hero-gender-tabs" id="hero-gender-tabs" role="tablist" aria-label="Chọn người mẫu Nam hoặc Nữ"><button type="button" data-hero-gender="women" role="tab">NỮ</button><button type="button" data-hero-gender="men" role="tab">NAM</button></div><div class="hero-size-row"><span>SIZE MUA HÀNG · ẢNH GIỮ NGUYÊN</span><div id="hero-size-options" role="group" aria-label="Chọn size người mẫu"></div></div></div>
+          <div class="panel-list-head"><span>KHÁM PHÁ SẢN PHẨM</span><span>KÉO / CHẠM</span></div>
+          <div class="hero-category-tabs" id="hero-category-tabs" role="tablist" aria-label="Danh mục trong tủ"><button type="button" data-hero-category="all">TẤT CẢ</button><button type="button" data-hero-category="top">ÁO</button><button type="button" data-hero-category="bottom">QUẦN / VÁY</button><button type="button" data-hero-category="shoes">GIÀY</button><button type="button" data-hero-category="accessories">PHỤ KIỆN</button></div>
+          <label class="hero-search"><span aria-hidden="true">⌕</span><input id="hero-search-input" type="search" placeholder="Tìm trong tủ đồ..." autocomplete="off"/></label>
+          <div class="hero-wardrobe" id="hero-wardrobe"></div>
+          <div class="panel-list-head selected-head"><span>ĐANG MẶC TRÊN MẪU</span><span id="look-piece-count">00 MÓN</span></div>
+          <div class="look-products" id="look-products"></div>
+          <div class="bundle-box">
+            <div class="bundle-price"><div><span>SET CỦA BẠN</span><strong id="bundle-total">0₫</strong></div><span class="bundle-save" id="bundle-piece-count">00 MÓN</span></div>
+            <button class="btn btn-red" id="add-look" type="button">Thêm set đang phối vào giỏ <span>↗</span></button>
+            <button class="under-button" id="customize-look" type="button">♡ Lưu / bỏ yêu thích bộ phối</button><button class="under-button" id="favorite-next" type="button">Xem bộ đã lưu ↗</button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="intro-strip" aria-label="Giới thiệu trải nghiệm"><div>01 / PHỐI ĐỒ</div><p>Chọn một món để xem chi tiết. <strong>Ảnh hiển thị các bộ phối có sẵn.</strong></p><a href="#phoi-do">TRỞ LẠI TỦ THAY ĐỒ ↑</a></section>
+
+      <section class="editorial-section" id="cam-hung" aria-labelledby="editorial-title"><div class="editorial-heading"><div><span class="eyebrow eyebrow-red"><span class="eyebrow-line"></span> THE HƯƠNG MUỐI EDIT</span><h2 id="editorial-title">Gợi ý để bắt đầu<span>.</span></h2></div><p>Khám phá các bộ phối đã có ảnh và chọn những món bạn yêu thích.</p></div><div class="editorial-grid" id="editorial-grid"></div></section>
+
+      <section class="studio-section" id="phoi-do-chi-tiet" aria-labelledby="studio-title">
+        <div class="section-heading"><div><span class="eyebrow eyebrow-red"><span class="eyebrow-line"></span> HƯƠNG MUỐI / MIXING ROOM</span><h2 id="studio-title">Phòng phối đồ<span>.</span></h2></div><p>Chọn Nam hoặc Nữ, chọn size của bạn rồi kéo món đồ vào mẫu. Trên điện thoại, chỉ cần chạm để thử.</p></div>
+        <div class="studio-layout">
+          <div class="wardrobe-panel">
+            <div class="wardrobe-header"><span>01 / TỦ ĐỒ</span><strong>Chọn món muốn thử</strong></div>
+            <div class="segmented" id="gender-tabs" role="tablist" aria-label="Chọn dòng sản phẩm"><button class="active" type="button" data-gender="women" role="tab" aria-selected="true">Nữ</button><button type="button" data-gender="men" role="tab" aria-selected="false">Nam</button></div>
+            <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="Tìm món đồ, ví dụ: áo khoác..." autocomplete="off" /></label>
+            <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Danh mục sản phẩm"><button class="active" type="button" data-category="all" role="tab" aria-selected="true">Tất cả</button><button type="button" data-category="top" role="tab" aria-selected="false">Áo</button><button type="button" data-category="bottom" role="tab" aria-selected="false">Quần / Váy</button><button type="button" data-category="shoes" role="tab" aria-selected="false">Giày</button></div>
+            <div class="wardrobe-list" id="wardrobe-list"></div>
+            <p class="wardrobe-tip">↗ Kéo món đồ vào người mẫu hoặc chạm “Thử lên mẫu”.</p>
+          </div>
+
+          <div class="tryon-panel" id="tryon-drop" aria-label="Vùng phối đồ, thả sản phẩm tại đây">
+            <div class="tryon-top"><span>02 / GƯƠNG THỬ ĐỒ</span><span class="live-pill"><span></span> LIVE MIX</span></div>
+            <div class="model-stage"><div class="model-guide"><span>YOUR LOOK</span><strong id="model-label">LINH / SIZE M</strong></div><div id="model-render" class="model-render" role="img" aria-label="Mẫu minh họa trang phục đang chọn"></div><div class="drop-indicator" id="drop-indicator">THẢ MÓN ĐỒ VÀO ĐÂY ↓</div></div>
+            <div class="model-controls"><div><span class="control-label">MẪU THEO SIZE</span><div class="size-options" id="size-options" role="group" aria-label="Chọn size mẫu"></div></div><div class="model-note"><span id="model-name">Mẫu Linh</span><small id="model-measure">Dáng M · tham khảo</small></div></div>
+            <p class="tryon-disclaimer">Hình mẫu minh hoạ cách phối và tỷ lệ size; số đo thực tế xem trong từng sản phẩm.</p>
+          </div>
+
+          <div class="selection-panel"><div class="wardrobe-header"><span>03 / SET CỦA BẠN</span><strong>Đang phối</strong></div><p class="selection-intro">Thêm áo, quần hoặc váy, rồi chọn đôi giày hợp gu.</p><div class="selected-slots" id="selected-slots"></div><div class="selection-summary"><div><span>TẠM TÍNH</span><strong id="selection-total">0₫</strong></div><button class="btn btn-dark" id="add-selection" type="button">Thêm set vào giỏ <span>↗</span></button><button class="under-button" id="reset-selection" type="button">Phối lại từ đầu</button></div></div>
+        </div>
+      </section>
+
+      <section class="shop-section" id="san-pham" aria-labelledby="shop-title"><div class="shop-heading"><div><span class="eyebrow eyebrow-red"><span class="eyebrow-line"></span> CURATED FOR YOU</span><h2 id="shop-title">Món đồ đáng thử<span>.</span></h2></div><a class="text-link" href="#phoi-do">Phối theo ý bạn ↗</a></div><div class="product-grid" id="featured-products"></div></section>
+
+      <section class="red-story"><div class="story-index">HƯƠNG MUỐI / 2026 <span>✳</span></div><h2>Không cần mặc giống ai.<br /><em>Chỉ cần hợp với mình.</em></h2><div class="story-bottom"><p>Đồ đẹp hơn khi bạn tự chọn cách kết hợp. Bắt đầu với một món, tạo nên cả một phong cách.</p><a href="#phoi-do">VÀO PHÒNG PHỐI ĐỒ <span>↗</span></a></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="#dau-trang">HƯƠNG<span>MUỐI</span><small>STUDIO</small></a><p>Thời trang cho người Việt.<br />Mặc theo cách của bạn.</p></div><div><strong>KHÁM PHÁ</strong><a href="#cam-hung">Look gợi ý</a><a href="#phoi-do">Tủ thay đồ</a><a href="#san-pham">Sản phẩm</a></div><div><strong>THÔNG TIN</strong><p id="footer-mode-note">Bản demo lưu dữ liệu trên trình duyệt này. Kết nối Supabase để nhận đơn từ khách thật.</p><a href="admin.html">Quản trị shop ↗</a></div></div><div class="footer-bottom"><span>© 2026 HƯƠNG MUỐI</span><span>MADE FOR EVERY BODY ✳</span><a href="#dau-trang">LÊN ĐẦU TRANG ↑</a></div></footer>
+
+    <div class="look-modal-backdrop" id="look-modal" hidden><section class="look-modal" role="dialog" aria-modal="true" aria-labelledby="modal-look-title"><div class="look-modal-head"><div><span>HƯƠNG MUỐI / FITTING ROOM</span><h2 id="modal-look-title">Set của bạn</h2></div><button class="close-button" id="close-look-modal" type="button" aria-label="Đóng chi tiết look">×</button></div><div class="look-modal-body"><div class="look-modal-stage" id="look-modal-stage"></div><div class="look-modal-side"><span class="panel-kicker">ĐANG MẶC TRÊN MẪU</span><p id="modal-look-profile"></p><div id="modal-look-products"></div><div class="modal-look-total"><span>TỔNG SET</span><strong id="modal-look-total">0₫</strong></div><button class="btn btn-red" id="modal-add-look" type="button">Thêm set vào giỏ ↗</button></div></div></section></div>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div><aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Giỏ hàng" aria-hidden="true"><div class="drawer-head"><div><span>YOUR SELECTION</span><h2>Giỏ hàng<span>.</span></h2></div><button class="close-button" id="close-cart" type="button" aria-label="Đóng giỏ hàng">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div><span>TẠM TÍNH</span><strong id="cart-total">0₫</strong></div><p>Chưa gồm phí giao hàng. Shop sẽ xác nhận khi liên hệ.</p><button class="btn btn-red" id="checkout-button" type="button">Tiếp tục đặt hàng <span>↗</span></button></div></aside>
+    <div class="modal-backdrop" id="checkout-backdrop" hidden><section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title"><button class="close-button" id="close-checkout" type="button" aria-label="Đóng">×</button><span class="eyebrow eyebrow-red"><span class="eyebrow-line"></span> ĐƠN HÀNG MẪU</span><h2 id="checkout-title">Hoàn tất thông tin<span>.</span></h2><p>Bản demo lưu đơn trên trình duyệt để bạn kiểm tra trải nghiệm. Chưa gửi đơn tới shop hoặc xử lý thanh toán.</p><form id="checkout-form"><label>Họ và tên<input name="name" required autocomplete="name" placeholder="Nguyễn Văn A" /></label><label>Số điện thoại<input name="phone" required inputmode="tel" autocomplete="tel" pattern="[0-9+ .-]{9,15}" placeholder="09xx xxx xxx" /></label><label>Địa chỉ nhận hàng<textarea name="address" required autocomplete="street-address" placeholder="Số nhà, đường, phường/xã, tỉnh/thành"></textarea></label><button class="btn btn-red" type="submit">Lưu đơn hàng mẫu <span>↗</span></button></form></section></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
+

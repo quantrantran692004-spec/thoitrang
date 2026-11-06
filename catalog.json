@@ -1,0 +1,28 @@
+{
+  "products": [
+    {"id":"red-knit","name":"Áo len đỏ nổi bật","category":"top","gender":"unisex","price":499000,"color":"#ad1427","accent":"#7f101f","style":"knit","sizes":{"XS":9,"S":14,"M":18,"L":12,"XL":7}},
+    {"id":"black-jacket","name":"Áo khoác da đen","category":"top","gender":"women","price":749000,"color":"#242324","accent":"#6d6866","style":"jacket","sizes":{"XS":4,"S":8,"M":9,"L":6,"XL":3}},
+    {"id":"ivory-shirt","name":"Sơ mi ivory oversized","category":"top","gender":"unisex","price":429000,"color":"#e8e0d1","accent":"#c8bca8","style":"shirt","sizes":{"XS":6,"S":13,"M":20,"L":14,"XL":8}},
+    {"id":"red-blazer","name":"Blazer đỏ dáng suông","category":"top","gender":"women","price":799000,"color":"#a91829","accent":"#e4b9b9","style":"blazer","sizes":{"XS":3,"S":6,"M":9,"L":5,"XL":2}},
+    {"id":"olive-overshirt","name":"Áo khoác utility olive","category":"top","gender":"men","price":559000,"color":"#666b4c","accent":"#333c2b","style":"jacket","sizes":{"XS":4,"S":9,"M":14,"L":11,"XL":6}},
+    {"id":"cream-knit","name":"Áo len kem cổ tròn","category":"top","gender":"women","price":449000,"color":"#eee2cb","accent":"#c6b69a","style":"knit","sizes":{"XS":8,"S":15,"M":16,"L":10,"XL":5}},
+    {"id":"charcoal-jeans","name":"Jeans ống rộng charcoal","category":"bottom","gender":"unisex","price":599000,"color":"#505050","accent":"#92908d","style":"pants","sizes":{"XS":6,"S":12,"M":17,"L":12,"XL":7}},
+    {"id":"indigo-jeans","name":"Jeans xanh indigo","category":"bottom","gender":"women","price":579000,"color":"#4d6380","accent":"#9da9b3","style":"pants","sizes":{"XS":8,"S":14,"M":16,"L":9,"XL":5}},
+    {"id":"sand-trousers","name":"Quần suông màu cát","category":"bottom","gender":"unisex","price":549000,"color":"#b4a38b","accent":"#d8c9b4","style":"pants","sizes":{"XS":5,"S":10,"M":17,"L":13,"XL":8}},
+    {"id":"black-skirt","name":"Chân váy xếp ly đen","category":"bottom","gender":"women","price":429000,"color":"#222024","accent":"#777078","style":"skirt","sizes":{"XS":5,"S":12,"M":13,"L":7,"XL":4}},
+    {"id":"black-trousers","name":"Quần đen dáng relaxed","category":"bottom","gender":"men","price":549000,"color":"#26282a","accent":"#717579","style":"pants","sizes":{"XS":3,"S":9,"M":15,"L":12,"XL":7}},
+    {"id":"blue-jeans","name":"Jeans xanh washed","category":"bottom","gender":"women","price":579000,"color":"#7894a7","accent":"#b4c4c9","style":"pants","sizes":{"XS":7,"S":15,"M":19,"L":11,"XL":6}},
+    {"id":"cream-sneakers","name":"Sneaker kem tối giản","category":"shoes","gender":"unisex","price":699000,"color":"#e8dfce","accent":"#aa9b87","style":"sneakers","sizes":{"XS":9,"S":16,"M":20,"L":14,"XL":8}},
+    {"id":"black-boots","name":"Boot cổ thấp đen","category":"shoes","gender":"women","price":829000,"color":"#252223","accent":"#696367","style":"boots","sizes":{"XS":4,"S":7,"M":10,"L":7,"XL":3}},
+    {"id":"burgundy-flats","name":"Giày búp bê burgundy","category":"shoes","gender":"women","price":529000,"color":"#70232d","accent":"#b7686d","style":"flats","sizes":{"XS":6,"S":12,"M":13,"L":8,"XL":4}}
+  ],
+  "looks": [
+    {"id":"city-red","name":"Phố lên đèn","description":"Một chút nổi bật, rất nhiều tự do.","gender":"men","image":"assets/looks/look-1.png","products":["red-knit","charcoal-jeans","cream-sneakers"]},
+    {"id":"night-out","name":"Đêm xuống phố","description":"Cá tính vừa đủ cho mọi cuộc hẹn.","gender":"women","image":"assets/looks/look-2.png","products":["black-jacket","indigo-jeans","black-boots"]},
+    {"id":"slow-morning","name":"Sáng thong thả","description":"Nhẹ nhàng nhưng không mờ nhạt.","gender":"men","image":"assets/looks/look-3.png","products":["ivory-shirt","sand-trousers","cream-sneakers"]},
+    {"id":"red-hour","name":"Giờ của sắc đỏ","description":"Một chiếc blazer làm nên câu chuyện.","gender":"women","image":"assets/looks/look-4.png","products":["red-blazer","black-skirt","black-boots"]},
+    {"id":"weekend-form","name":"Cuối tuần tự do","description":"Thoải mái trong từng chuyển động.","gender":"men","image":"assets/looks/look-5.png","products":["olive-overshirt","black-trousers","cream-sneakers"]},
+    {"id":"soft-edge","name":"Mềm mà sắc","description":"Một set dịu dàng, có điểm nhấn riêng.","gender":"women","image":"assets/looks/look-6.png","products":["cream-knit","blue-jeans","burgundy-flats"]}
+  ]
+}
+
